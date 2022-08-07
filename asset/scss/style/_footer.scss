@@ -1,0 +1,178 @@
+footer {
+    .footer-top {
+        height: 450px;
+        background-color: #393939;
+        padding: 90px 20px 40px 0;
+        color: #fff;
+
+        .footer-item {
+            .footer-logo {
+                text-align: center;
+
+                img {
+                    width: 157px;
+                }
+
+                p {
+                    line-height: 2rem;
+                    margin: 15px;
+                    @include hover(none, none, context-menu);
+                }
+
+                .footer-social {
+                    .social-list {
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        list-style: none;
+
+                        .social-item {
+                            padding: 0 8px;
+                            @include transition(transform, linear, .4s);
+
+                            &:hover {
+                                @include hover(none, $hoverColor, pointer);
+                                transform: translateY(-4px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer-container {
+                .footer-title {
+                    @include font($font, none, 700);
+                    margin-bottom: 12px;
+                    @include hover(none, none, context-menu);
+                }
+
+                .footer-menu {
+                    text-transform: uppercase;
+                    padding: 0;
+                    list-style: none;
+
+                    .footer-menu--item {
+                        @include transition(all, linear, .3s);
+
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                            @include transition(all, linear, .3s);
+
+                        }
+
+                        line-height: 1.8rem;
+                        padding: 4px 0;
+
+                        &:hover,
+                        &:hover a {
+                            @include hover(none, $hoverColor, pointer);
+                        }
+                    }
+                }
+
+                .footer-newsletter {
+                    margin: 20px 0;
+                    width: 220px;
+                    position: relative;
+                    height: 40px;
+
+                    .footer-newsletter-input {
+                        width: 166px;
+                        height: 40px;
+                        padding: 13px 10px 10px 10px;
+                        outline: none;
+                        border: none;
+                        @include font($font, 1rem, none);
+                    }
+
+                    .footer-newsletter-btn {
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 56px;
+                        height: 40px;
+                        padding: 10px 20px;
+                        color: #fff;
+                        background-color: #000;
+                        right: 0px;
+                        top: 0;
+                        @include transition(all, linear, .3s);
+                        @include font($font, 1rem, none);
+
+                        &:hover {
+                            @include hover($hoverColor, none, pointer);
+                        }
+                    }
+
+                }
+
+                p {
+                    line-height: 1.6rem;
+                    margin: 0;
+                    @include hover(none, none, context-menu);
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: #212121;
+        width: 100%;
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+
+            p {
+                margin: 0;
+                @include hover(none, none, context-menu);
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                padding-left: 4px;
+                @include transition(all, linear, .3s);
+
+                &:hover {
+                    @include hover(none, $hoverColor, pointer);
+                }
+            }
+        }
+    }
+
+    .end-of-page {
+        
+        .icon-top {
+            visibility: hidden;
+            opacity: 0;
+            transition: all linear .5s;
+            background-color: #000;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            padding: 10px;
+            font-size: 2rem;
+            position: fixed;
+            z-index: 1;
+            right: 20px;
+            bottom: 10px;
+            @include transition(all, linear, .3s);
+
+            &.show-icon-top {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            &:hover {
+                @include hover($hoverColor, none, pointer);
+            }
+        }
+    }
+}

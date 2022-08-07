@@ -1,0 +1,426 @@
+.text-center {
+    background-color: #000;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 1;
+    z-index: 6;
+    @include transition(all, linear, .3s);
+    transform: translateY(0);
+    visibility: visible;
+
+    &.close-text {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+
+    a {
+        @include font($font, 1rem, none);
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        padding: 2px;
+
+        &:hover {
+            @include hover(none, $hoverColor, pointer);
+        }
+    }
+
+    .close-text-center {
+        position: absolute;
+        right: 20px;
+        color: #fff;
+        @include transition(all, linear, .3s);
+
+        &:hover {
+            @include hover(none, $hoverColor, pointer);
+        }
+    }
+
+}
+
+.search-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+
+
+    background-color: #fff;
+    visibility: hidden;
+    height: 91px;
+    @include transition(all, linear, .4s);
+    opacity: 0;
+    transform: translateY(-91px);
+
+    &.open-search {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .search-box {
+        position: relative;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+        z-index: 999;
+
+
+        .search-box-input {
+            border: 1px solid #e9e9e9;
+            width: 100%;
+            background-color: #fff;
+            outline: none;
+            padding: 10px 20px;
+        }
+
+        input[type=text]:focus {
+            border: 1px solid #000;
+        }
+
+        .search-box-icon {
+            background-color: #000;
+            color: #fff;
+            padding: 13px 20px 12px;
+            margin-left: 16px;
+            @include transition(all, linear, .3s);
+
+            &:hover {
+                @include hover($hoverColor, none, pointer);
+            }
+        }
+
+        .search-box-close {
+            font-size: 1.6rem;
+            color: #000;
+            height: 46px;
+            margin: 15px 20px 0 30px;
+            @include transition(all, linear, .3s);
+
+            &:hover {
+                @include hover(none, $hoverColor, pointer);
+            }
+        }
+
+    }
+}
+
+header {
+    @include transition(all, linear, .3s);
+
+    .nav-header {
+        top: 0;
+        transform: translateY(0);
+        left: 0;
+        right: 0;
+        z-index: 5;
+        position: fixed;
+        @include transition(all, linear, .3s);
+        background-color: #fff;
+
+        &.active {
+            height: 46px !important;
+            height: 0;
+            top: 0;
+            transform: translateY(-100%);
+            position: absolute;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.9);
+            @include transition(all, linear, .3s);
+            box-shadow: 0 2px 5px #e9e9e9;
+            visibility: hidden;
+        }
+
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // border-bottom: 1px solid #bbb;
+
+
+        .nav-menu {
+            margin: 0 32px;
+            @include font($font, 1.2rem, none);
+            display: flex;
+            align-items: center;
+            @include hover(none, none, pointer);
+            @include transition(transform, linear, .3s);
+
+            .icon-menu {
+                width: 18px;
+                height: 100%;
+                position: relative;
+                margin-right: 12px;
+                top: -8px;
+
+                .bar-1 {
+                    position: absolute;
+                    background-color: #000;
+                    width: 20px;
+                    height: 2px;
+                    top: 0;
+                }
+
+                .bar-2 {
+                    position: absolute;
+                    background-color: #333;
+                    width: 20px;
+                    height: 1px;
+                    top: 6px;
+                    @include transition(all, linear, .3s);
+                }
+
+                .bar-3 {
+                    position: absolute;
+                    background-color: #000;
+                    width: 20px;
+                    height: 2px;
+                    top: 11px;
+                }
+
+            }
+
+            .menu {
+                margin: 0;
+            }
+
+            &:hover .bar-2 {
+                transform: translateX(6px);
+            }
+
+        }
+
+        .nav-logo {
+            padding-left: 90px;
+
+            img {
+                max-width: 120px;
+                padding-top: 2px;
+            }
+        }
+
+        .nav-item {
+            width: 210px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 32px;
+            @include hover(none, none, pointer);
+            position: relative;
+
+
+            .nav-account a,
+            .nav-cart a {
+                color: #000;
+            }
+
+            .header-account-icon,
+            .header-cart-icon {
+                font-size: 1.4rem;
+                padding: 0 30px;
+                @include transition(all, linear, .3s);
+            }
+
+            .header-search-icon {
+                font-size: 1.4rem;
+                padding: 0 0 0 30px;
+                @include transition(all, linear, .3s);
+            }
+
+            .header-account-icon:hover,
+            .header-search-icon:hover {
+                @include hover(none, $hoverColor, pointer);
+            }
+
+            .nav-cart:hover a,
+            .nav-cart:hover a .number {
+                @include hover(none, $hoverColor, pointer);
+                border-color: $hoverColor;
+            }
+
+            .nav-cart .number {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 64px;
+                top: -4px;
+                @include font($font, 0.8rem, none);
+                line-height: 1.2rem;
+                padding: 1px;
+                border-radius: 50%;
+                border: 1px solid #000;
+                background-color: #fff;
+                text-align: center;
+            }
+
+
+
+            .nav-account::after,
+            .nav-cart::after {
+                content: "";
+                position: absolute;
+                border-right: 1px dashed #000;
+                height: 32px;
+                top: -3px;
+            }
+
+        }
+    }
+
+
+
+    .header-menu {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.4);
+        visibility: hidden;
+        @include transition(all, linear, .4s);
+        opacity: 0;
+
+        &.open-menu {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        .nav-list {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 260px;
+            z-index: 100;
+            background-color: #fff;
+            transform: translateX(-100%);
+            @include transition(all, linear, .4s);
+
+
+
+            .menu-list {
+                @include font($font, 1.2rem, none);
+                list-style: none;
+                padding-left: 0;
+                z-index: 50;
+                position: relative;
+                z-index: 100;
+                .icon-close {
+                    text-align: right;
+                    padding: 8px;
+                    position: relative;
+                    z-index: 100;
+
+                    .close-menu {
+                        @include transition(all, linear, .3s);
+
+                        &:hover {
+                            transform: rotateY(180deg);
+                            @include hover(none, $hoverColor, pointer);
+                        }
+                    }
+
+                }
+
+                .menu-item {
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 50;
+                    background-color: #fff;
+                    @include transition(all, linear, .3s);
+                    height:auto;
+                    .hover-menu {
+                        padding: 12px;
+                        @include transition(all, linear, .3s);
+                        position: relative;
+                        z-index: 4;
+                        background-color: #fff;
+                        a {
+                            color: #000;
+                            text-decoration: none;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                border-top: 1px solid #dedede;
+                                width: 100%;
+                                top: 0;
+                                left: 0;
+                            }
+
+                        }
+
+                        &:hover a {
+                            @include hover(none, $hoverColor, pointer);
+                        }
+
+                        &:hover .icon-right {
+                            @include hover(none, $hoverColor, pointer);
+                            transform: translate(4px);
+                        }
+
+                        &.bg {
+                            background-color: #e9e9e9;
+                        }
+                       
+
+                        .icon-right {
+                            position: absolute;
+                            right: 12px;
+                            top: 16px;
+                        }
+                    }
+
+                    .list {
+                        position: absolute;
+                        visibility: hidden;
+                        opacity: 0;
+                        z-index: 1;
+                        padding-left: 0;
+                        background-color: #fff;
+                        transform: translateY(-100%);
+                        @include transition(all, linear, .3s);
+                      
+
+                        &.openList {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: translateY(0);
+                            
+                        }
+
+                        .item {
+                            display: block;
+                            list-style: none;
+                            padding-bottom: 12px;
+                            padding-left: 12px;
+                            a {
+                                text-decoration: none;
+                                color: #000;
+                            }
+
+                            &:first-child {
+                                padding-top: 8px;
+                            }
+
+                            &:hover a{
+                                @include hover(none, $hoverColor, pointer);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}

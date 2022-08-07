@@ -1,0 +1,176 @@
+main {
+    .index-header {
+        position: relative;
+        padding-top: 46px;
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 9;
+
+            &::before {
+                content: "";
+            }
+        }
+
+        .slick-prev {
+            left: 100px;
+        }
+
+        .slick-next {
+            right: 100px;
+        }
+
+        .header-slideshow {
+            .header-slider {
+                position: relative;
+
+                .slide-img {
+                    width: 100%;
+                    height: 700px;
+                    object-fit: cover;
+                    position: relative;
+                }
+
+                .slider-content {
+                    position: absolute;
+                    text-transform: uppercase;
+                    top: 35%;
+                    left: 45%;
+                    z-index: 70;
+
+                    .slide-sub-heading {
+                        @include font($font, 1.4rem, 600);
+                        line-height: 1.4;
+                    }
+
+                    .slide-heading {
+                        @include font($font, 3rem, 700);
+                        line-height: 4rem;
+                        letter-spacing: 2px;
+                        padding: 10px 0;
+                    }
+
+                    .slide-text {
+                        @include font($font, 1.6rem, 600);
+                        line-height: 2rem;
+                    }
+
+                    .multiple-button {
+                        padding-top: 35px;
+                        text-align: center;
+                        width: 200px;
+
+                        .multiple-btn {
+                            @include font($font, 1.2rem, 600);
+                            width: 100%;
+                            height: 60px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #fff;
+                            background-color: #000;
+                            text-decoration: none;
+                            border: none;
+                            @include transition(all, linear, .3s);
+
+                            &:hover {
+                                @include hover($hoverColor, none, pointer);
+                            }
+
+                            span {
+                                margin-top: 5px;
+                            }
+
+                        }
+
+                    }
+
+                    &.text-center-content {
+                        position: absolute;
+                        top: 35%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        text-align: center;
+
+                        .multiple-button {
+                            .multiple-btn {
+                                left: 50%;
+                                transform: translateX(100%);
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            &:hover {
+                @include hover(none, none, grab);
+            }
+        }
+
+
+
+        .header-support {
+            margin-top: -4px;
+            background-color: #000;
+            padding: 10px;
+            @include hover(none, none, context-menu);
+
+            .support-item {
+                display: flex;
+                align-items: center;
+                padding: 14px 10px 4px;
+
+                img {
+                    width: 58px;
+                    margin: 0 12px;
+                }
+
+                .support-heading {
+                    @include font($font, 1.2rem, 700);
+                    line-height: 1.6rem;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+            }
+        }
+
+
+
+        .behavior-prev {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            left: -100%;
+            top: 44%;
+            position: absolute;
+            z-index: 1;
+            @include transition(all, linear, .3s);
+        }
+
+        .behavior-next {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            right: -100%;
+            top: 44%;
+            position: absolute;
+            z-index: 1;
+            @include transition(all, linear, .3s);
+        }
+
+        .behavior-next:hover,
+        .behavior-prev:hover {
+            @include hover($hoverColor, none, pointer);
+        }
+
+
+    }
+
+}

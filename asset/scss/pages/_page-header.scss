@@ -1,0 +1,32 @@
+.index-header {
+    
+    .pages-header {
+        background-color: #000;
+        min-height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        cursor: context-menu;
+        .page-heading {
+            @include font($font, none, 700);
+            text-transform: uppercase;
+        }
+        .path {
+            @include font($font, 1.2rem, none);
+            padding: 20px 0;
+            .back-to-home {
+                text-decoration: none;
+                color: #fff;
+                @include transition(all, linear, .3s);
+    
+                &:hover {
+                    @include hover(none, $hoverColor, pointer);
+                }
+            }
+            
+        }
+        
+    }
+}

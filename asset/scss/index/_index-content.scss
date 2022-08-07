@@ -1,0 +1,276 @@
+.index-container {
+    padding: 100px 0 50px;
+
+    .product-trending {
+        .trending-title {
+            @include font($font, 2.4rem, 800);
+            line-height: 2.4rem;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .trending-list {
+            list-style: none;
+            padding: 0 30px;
+            margin: 0 10px;
+
+            .trending-item {
+                width: 340px;
+                margin: 0 auto;
+
+
+                .trending-info {
+                    width: 100%;
+                    text-align: center;
+
+
+                    .trending-img {
+                        width: 100%;
+                        position: relative;
+                        display: inline-block;
+
+                        img {
+                            width: 100%;
+                            overflow: hidden;
+
+                            &.last-img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 4;
+                                display: none;
+
+                            }
+                        }
+
+                        .trending-icon {
+                            .trending-button {
+                                position: absolute;
+                                bottom: 24px;
+                                left: 23%;
+                                z-index: 4;
+                                visibility: hidden;
+                                opacity: 0;
+                                transform: translateY(50%);
+                                @include transition(all, ease, .8s);
+
+                                .trending-button__icon {
+                                    padding: 0 5px;
+
+                                    i {
+                                        width: 40px;
+                                        height: 40px;
+                                        background-color: #000;
+                                        color: #fff;
+                                        padding-top: 12px;
+
+                                        &:hover {
+                                            @include hover($hoverColor, #fff, pointer);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .last-img {
+                                display: inline;
+                                cursor: pointer;
+                            }
+
+                            .trending-icon {
+                                .trending-button {
+                                    visibility: visible;
+                                    opacity: 0.8;
+                                    transform: translateY(0);
+
+                                }
+                            }
+                        }
+                    }
+
+
+
+                    .trending-detail {
+                        padding: 30px 0;
+                        width: 100%;
+                        cursor: context-menu;
+
+
+                        .trending-vendor {
+                            @include font($font, 1rem, none);
+                            margin-bottom: 8px;
+                        }
+
+                        .trending-link__title {
+                            a {
+                                color: #000;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                @include font($font, 1.2rem, 700);
+                                line-height: 1.4rem;
+                                @include transition(all, linear, .3s);
+
+                                &:hover {
+                                    @include hover(none, $hoverColor, pointer);
+                                }
+                            }
+                        }
+
+                        .trending-link__price {
+                            padding-top: 8px;
+                            @include font($font, 1.2rem, 700);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .product-slider {
+        padding-top: 50px;
+
+        .slider-image {
+            margin: 0 32px;
+            position: relative;
+
+            .slide-img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+            }
+
+            .slider-content {
+
+                .slide1 {
+                    width: 35%;
+                    height: 30%;
+                    background-color: #fff;
+                    text-align: center;
+                    background-color: #fff;
+                    padding: 20px 30px 30px 30px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transform-origin: center center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    @include transition(all, linear, .3s);
+
+
+                    .slide-heading {
+                        @include font($font, 2.4rem, 800);
+                        line-height: 2.4rem;
+                        text-transform: uppercase;
+                        padding-bottom: 20px;
+                    }
+
+                    .multiple-buttons {
+
+                        .slide-button {
+                            text-decoration: none;
+                            @include font($font, 1.2rem, none);
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #000;
+                            padding: 16px 20px 12px 20px;
+                            @include transition(all, linear, .3s);
+
+                            &:first-child {
+                                margin-right: 4px;
+                            }
+
+                            &:hover {
+                                @include hover($hoverColor, none, pointer);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        width: 90%;
+                        height: 80%;
+                        background-color: #fff;
+                        opacity: 0.8;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .home-category {
+        padding: 100px 0 60px;
+
+        .shop-category {
+            .category-heading {
+                .category-main-heading {
+                    text-transform: uppercase;
+                    @include font($font, 2.4rem, 800);
+                    line-height: 2.4rem;
+                    text-align: center;
+                }
+            }
+
+            .category-list {
+                margin: 40px 14px;
+                display: flex;
+                justify-content: space-around;
+                padding: 0 2px;
+
+                .category-item {
+                    width: 290px;
+
+                    .category-content {
+                        .category-image {
+                            height: 180px;
+
+                            img {
+                                width: 100%;
+                                padding: 0 8px;
+                            }
+                        }
+
+                        .category-heading {
+                            margin: 30px 0 15px;
+                            text-align: center;
+
+                            a {
+                                color: #000;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                @include font($font, 1.2rem, 700);
+                                @include transition(all, linear, .3s);
+
+                                &:hover {
+                                    @include hover(none, $hoverColor, pointer);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .index-ins {
+        text-align: center;
+        margin-bottom: 60px;
+        cursor: context-menu;
+
+        .ins-heading {
+            text-transform: uppercase;
+            @include font($font, 2.4rem, 800);
+            line-height: 3rem;
+        }
+
+        .ins-desc {
+            padding: 10px 0;
+            margin: 0;
+        }
+    }
+}

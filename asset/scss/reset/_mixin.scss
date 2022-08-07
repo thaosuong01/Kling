@@ -1,0 +1,15 @@
+@mixin transition($name, $amination, $time) {
+    transition: $name $amination $time;
+}
+
+@mixin hover($background, $color, $cursor) {
+    background-color: $background;
+    color: $color;
+    cursor: $cursor;
+}
+
+@mixin font($family, $size, $weight) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}

@@ -1,0 +1,273 @@
+.modal-cart {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+    @include transition(all, linear, .4s);
+
+
+    &.open-cart {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    .cart-container {
+        width: 300px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #fff;
+        transform: translateX(100%);
+        @include transition(all, linear, .4s);
+
+        .cart-header {
+            .cart-close {
+                position: absolute;
+                left: -36px;
+                top: 0;
+
+                .cart-close--icon {
+                    font-size: 1.4rem;
+                    padding: 5px 10px;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #000;
+                    border: 1px solid #fff;
+                    @include transition(all, linear, .3s);
+
+                    &:hover {
+                        @include hover($hoverColor, none, pointer);
+                    }
+                }
+            }
+
+            .cart-title {
+                @include font($font, 1.8rem, 800);
+                line-height: 2rem;
+                padding: 20px 12px;
+                margin: 0;
+
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                width: 100%;
+                top: 70px;
+            }
+        }
+
+        .cart-content {
+            .cart-empty {
+                padding: 10px 12px;
+
+                p {
+                    @include font($font, 1rem, none);
+                    line-height: 1rem;
+                    padding: 2px 0 12px;
+                    margin-bottom: 16px;
+                }
+
+                a {
+                    color: #fff;
+                    background-color: #000;
+                    @include font($font, 1.4rem, none);
+                    text-decoration: none;
+                    padding: 14px 41px;
+                    width: 100%;
+                    @include transition(all, linear, .3s);
+
+                    &:hover {
+                        @include hover($hoverColor, none, pointer);
+                    }
+
+                }
+            }
+        }
+
+        .cart-product {
+            padding: 12px;
+
+            .cart-product-list {
+                padding-bottom: 20px;
+                position: relative;
+
+                .cart-product-item {
+                    display: flex;
+                    @include transition(all, linear, .3s);
+
+                    .cart-product--img {
+                        img {
+                            width: 72px;
+                            padding-right: 8px;
+                            cursor: pointer;
+                        }
+
+                        .cart-product--remove {
+                            position: absolute;
+                            color: #fff;
+                            left: 0;
+                            width: 19px;
+                            height: 20px;
+                            text-align: center;
+                            @include transition(all, linear, .3s);
+                        }
+                    }
+
+                    .cart-product--info {
+                        a {
+                            text-decoration: none;
+                            color: #000;
+                            @include transition(all, linear, .3s);
+
+
+                            .cart-product--title {
+                                @include font($font, 1.2rem, 700);
+                                line-height: 1.8rem;
+                                text-transform: uppercase;
+                            }
+
+                            &:hover {
+                                @include hover(none, $hoverColor, pointer);
+                            }
+                        }
+
+                        .cart-product--desc {
+                            @include hover(none, none, context-menu);
+
+                            .cart-product--color {
+                                @include font($font, 0.8rem, none);
+                                padding-top: 8px;
+                            }
+
+                            .cart-product--quantity {
+                                margin-top: 16px;
+                                display: flex;
+                                width: 110px;
+
+                                .cart-product--sub,
+                                .cart-product--sum {
+                                    width: 30px;
+                                    height: 30px;
+                                    border: 1px solid #e9e9e9;
+                                    background-color: #fff;
+                                    @include font($font, 1rem, 600);
+                                    @include transition(all, linear, .3s);
+
+                                }
+
+                                .cart-product--sub:hover,
+                                .cart-product--sum:hover {
+                                    @include hover(#000, #fff, pointer);
+                                    border-color: #000;
+                                }
+
+                                .cart-quanlity--num {
+                                    border: {
+                                        top: 1px solid #e9e9e9;
+                                        bottom: 1px solid #e9e9e9;
+                                    }
+
+                                    ;
+                                    width: 50px;
+                                    height: 30px;
+                                    background-color: #fff;
+                                    text-align: center;
+                                    padding-top: 4px;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover .cart-product--img .cart-product--remove {
+                        background-color: #000;
+
+                        &:hover {
+                            @include hover($hoverColor, none, pointer);
+                        }
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    border-bottom: 1px solid #e9e9e9;
+                    width: 100%;
+                    bottom: -10%;
+                }
+            }
+
+            .sub-total {
+                padding-top: 30px;
+                @include font($font, none, 600);
+                display: flex;
+                justify-content: space-between;
+                @include hover(none, none, context-menu);
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    border-bottom: 1px solid #e9e9e9;
+                    width: 100%;
+                    bottom: -12%;
+                }
+            }
+
+            .cart-bottom {
+                .total-text {
+                    p {
+                        @include font($font, 0.9rem, none);
+                        margin: 20px 0;
+                        line-height: 1.6rem;
+                        @include hover(none, none, context-menu);
+                    }
+                }
+
+                .cart-checkout {
+                    border: none;
+                    background-color: #000;
+                    color: #fff;
+                    width: 100%;
+                    padding: 12px;
+                    text-transform: uppercase;
+                    @include transition(all, linear, .3s);
+
+                }
+
+                .cart-view {
+                    margin-top: 16px;
+                    border: none;
+                    background-color: #000;
+                    color: #fff;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 12px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    @include transition(all, linear, .3s);
+                }
+
+                .cart-checkout:hover,
+                .cart-view:hover {
+                    @include hover($hoverColor, none, pointer);
+                }
+            }
+
+
+        }
+    }
+
+}
