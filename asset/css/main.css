@@ -1264,8 +1264,11 @@ main .index-header .behavior-prev:hover {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: none;
-  padding: 10px 30px;
+  padding: 14px 30px 8px 30px;
   transition: all linear 0.3s;
+}
+.page-box .page-box-info .page-box-button .page-box-btn span {
+  margin-top: 4px;
 }
 .page-box .page-box-info .page-box-button .page-box-btn:hover {
   background-color: #eb6420;

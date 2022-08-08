@@ -218,8 +218,12 @@
                 text-decoration: none;
                 text-transform: uppercase;
                 @include font($font, 1.2rem, none);
-                padding: 10px 30px;
+                padding: 14px 30px 8px 30px;
                 @include transition(all, linear, .3s);
+
+                span {
+                    margin-top: 4px;
+                }
 
                 &:hover {
                     @include hover($hoverColor, #fff, pointer);
