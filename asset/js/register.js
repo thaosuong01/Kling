@@ -56,7 +56,7 @@ window.addEventListener('load', function () {
             isLogin = false;
         }
         else if(valuePass.length < 8) {
-            errorPassword.textContent = 'Password must be more than 8 characters';
+            errorPassword.textContent = 'Please enter at least 8 characters';
             isLogin = false;
         }
         else {
