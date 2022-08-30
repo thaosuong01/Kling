@@ -290,7 +290,7 @@
             .review-form {
                 margin-bottom: 16px;
                 padding-bottom: 20px;
-                display: none;
+                // display: none;
 
                 .review-title {
                     @include font($font, 1.2rem, 600);

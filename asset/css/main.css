@@ -1034,9 +1034,9 @@ main .index-header .behavior-prev:hover {
   margin: 0;
 }
 
-.index-header .pages-header {
+.bg-header {
   background-color: #000;
-  min-height: 260px;
+  height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1044,24 +1044,24 @@ main .index-header .behavior-prev:hover {
   color: #fff;
   cursor: context-menu;
 }
-.index-header .pages-header .page-heading {
+.bg-header .heading {
   font-family: "Josefin Sans", sans-serif;
   font-size: none;
   font-weight: 700;
   text-transform: uppercase;
 }
-.index-header .pages-header .path {
+.bg-header .path {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: none;
   padding: 20px 0;
 }
-.index-header .pages-header .path .back-to-home {
+.bg-header .path .back-to-home {
   text-decoration: none;
   color: #fff;
   transition: all linear 0.3s;
 }
-.index-header .pages-header .path .back-to-home:hover {
+.bg-header .path .back-to-home:hover {
   background-color: none;
   color: #eb6420;
   cursor: pointer;
@@ -1264,11 +1264,8 @@ main .index-header .behavior-prev:hover {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: none;
-  padding: 14px 30px 8px 30px;
+  padding: 14px 30px 10px 30px;
   transition: all linear 0.3s;
-}
-.page-box .page-box-info .page-box-button .page-box-btn span {
-  margin-top: 4px;
 }
 .page-box .page-box-info .page-box-button .page-box-btn:hover {
   background-color: #eb6420;
@@ -1398,39 +1395,6 @@ main .index-header .behavior-prev:hover {
 }
 .page-team .page-team-container .page-team-list .page-team-item .page-team-content p {
   margin: 0;
-}
-
-.index-header .product-header {
-  background-color: #000;
-  height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  cursor: context-menu;
-}
-.index-header .product-header .product-heading {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: none;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.index-header .product-header .path {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: none;
-  padding: 20px 0;
-}
-.index-header .product-header .path .back-to-home {
-  text-decoration: none;
-  color: #fff;
-  transition: all linear 0.3s;
-}
-.index-header .product-header .path .back-to-home:hover {
-  background-color: none;
-  color: #eb6420;
-  cursor: pointer;
 }
 
 .product-main {
@@ -1604,39 +1568,6 @@ main .index-header .behavior-prev:hover {
   font-weight: 700;
 }
 
-.index-header .contact-header {
-  background-color: #000;
-  height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  cursor: context-menu;
-}
-.index-header .contact-header .contact-heading {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: none;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.index-header .contact-header .path {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: none;
-  padding: 20px 0;
-}
-.index-header .contact-header .path .back-to-home {
-  text-decoration: none;
-  color: #fff;
-  transition: all linear 0.3s;
-}
-.index-header .contact-header .path .back-to-home:hover {
-  background-color: none;
-  color: #eb6420;
-  cursor: pointer;
-}
-
 .contact-container {
   padding: 100px 60px;
 }
@@ -1770,39 +1701,6 @@ main .index-header .behavior-prev:hover {
   margin-top: 20px;
 }
 
-.blog-header {
-  background-color: #000;
-  height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  cursor: context-menu;
-}
-.blog-header .blog-heading {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: none;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.blog-header .path {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: none;
-  padding: 20px 0;
-}
-.blog-header .path .back-to-home {
-  text-decoration: none;
-  color: #fff;
-  transition: all linear 0.3s;
-}
-.blog-header .path .back-to-home:hover {
-  background-color: none;
-  color: #eb6420;
-  cursor: pointer;
-}
-
 .blog-container {
   padding: 90px 0;
 }
@@ -1882,39 +1780,6 @@ main .index-header .behavior-prev:hover {
 .blog-container .blog-grid .blog-grid-header .blog-grid-content .read-more:hover {
   background-color: #eb6420;
   color: none;
-  cursor: pointer;
-}
-
-.index-header .account-header {
-  background-color: #000;
-  height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  cursor: context-menu;
-}
-.index-header .account-header .account-heading {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: none;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.index-header .account-header .path {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: none;
-  padding: 20px 0;
-}
-.index-header .account-header .path .back-to-home {
-  text-decoration: none;
-  color: #fff;
-  transition: all linear 0.3s;
-}
-.index-header .account-header .path .back-to-home:hover {
-  background-color: none;
-  color: #eb6420;
   cursor: pointer;
 }
 
@@ -2000,39 +1865,6 @@ main .index-header .behavior-prev:hover {
   cursor: pointer;
 }
 
-.index-header .register-header {
-  background-color: #000;
-  height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  cursor: context-menu;
-}
-.index-header .register-header .register-heading {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: none;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.index-header .register-header .path {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: none;
-  padding: 20px 0;
-}
-.index-header .register-header .path .back-to-home {
-  text-decoration: none;
-  color: #fff;
-  transition: all linear 0.3s;
-}
-.index-header .register-header .path .back-to-home:hover {
-  background-color: none;
-  color: #eb6420;
-  cursor: pointer;
-}
-
 .container .register {
   background-color: #f7f7f7;
   padding: 40px;
@@ -2110,39 +1942,6 @@ main .index-header .behavior-prev:hover {
   border: 1px solid #eb6420;
 }
 .container .register .form-register .link-wrapper .login:hover a {
-  background-color: none;
-  color: #eb6420;
-  cursor: pointer;
-}
-
-.index-header .details-header {
-  background-color: #000;
-  height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  cursor: context-menu;
-}
-.index-header .details-header .details-heading {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: none;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.index-header .details-header .path {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: none;
-  padding: 20px 0;
-}
-.index-header .details-header .path .back-to-home {
-  text-decoration: none;
-  color: #fff;
-  transition: all linear 0.3s;
-}
-.index-header .details-header .path .back-to-home:hover {
   background-color: none;
   color: #eb6420;
   cursor: pointer;
@@ -2401,7 +2200,6 @@ main .index-header .behavior-prev:hover {
 .product-details .product-review .review-container .review-form {
   margin-bottom: 16px;
   padding-bottom: 20px;
-  display: none;
 }
 .product-details .product-review .review-container .review-form .review-title {
   font-family: "Josefin Sans", sans-serif;

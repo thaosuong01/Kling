@@ -382,19 +382,19 @@ header {
 
                     .list {
                         position: absolute;
-                        visibility: hidden;
-                        opacity: 0;
+                        // visibility: hidden;
+                        // opacity: 0;
                         z-index: 1;
                         padding-left: 0;
                         background-color: #fff;
-                        transform: translateY(-100%);
+                        // transform: translateY(-100%);
                         @include transition(all, linear, .3s);
                       
 
                         &.openList {
                             visibility: visible;
                             opacity: 1;
-                            transform: translateY(0);
+                            // transform: translateY(0);
                             
                         }
 
