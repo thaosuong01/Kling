@@ -366,18 +366,14 @@ header .header-menu .nav-list .menu-list .menu-item .hover-menu .icon-right {
 }
 header .header-menu .nav-list .menu-list .menu-item .list {
   position: absolute;
-  visibility: hidden;
-  opacity: 0;
   z-index: 1;
   padding-left: 0;
   background-color: #fff;
-  transform: translateY(-100%);
   transition: all linear 0.3s;
 }
 header .header-menu .nav-list .menu-list .menu-item .list.openList {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0);
 }
 header .header-menu .nav-list .menu-list .menu-item .list .item {
   display: block;

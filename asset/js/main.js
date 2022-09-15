@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
     // header
     let headerCurrent = document.querySelector('.current');
-    let headerActive  = document.querySelector('.nav-header.active');
+    let headerActive = document.querySelector('.nav-header.active');
     // menu
     const menu = document.querySelectorAll('.nav-menu');
     const menuList = document.querySelector('.header-menu');
@@ -10,7 +10,7 @@ window.addEventListener('load', function () {
 
 
 
-    [...menu].forEach(item=>item.addEventListener('click', function () {
+    [...menu].forEach(item => item.addEventListener('click', function () {
         menuList.classList.add('open-menu');
         navList.style.transform = "translateX(0)";
     })
@@ -35,7 +35,7 @@ window.addEventListener('load', function () {
     const cartContent = document.querySelector('.cart-container');
 
 
-    [...cart].forEach(item=>item.addEventListener('click', function (e) {
+    [...cart].forEach(item => item.addEventListener('click', function (e) {
         e.preventDefault()
         modalCart.classList.add('open-cart');
         cartContent.style.transform = "translateX(0)";
@@ -52,7 +52,7 @@ window.addEventListener('load', function () {
             cartContent.style.transform = "translateX(100%)";
         }
         e.stopPropagation();
-    })
+    });
 
     // search 
     const searchBox = document.querySelector('.search-header');
@@ -60,16 +60,18 @@ window.addEventListener('load', function () {
     const searchClose = document.querySelector('.search-box-close-icon');
     const searchHeight = searchBox.offsetHeight;
     const header = document.querySelector('.header');
-    [...search].forEach(item=>item.addEventListener('click', function (e) {
+    [...search].forEach(item => item.addEventListener('click', function (e) {
         e.stopImmediatePropagation();
-    let positionSeachBox = searchBox.getBoundingClientRect();
-        headerCurrent.style.top = `${-1 * positionSeachBox.top}px`;
-        searchBox.classList.add('open-search');
-        searchBox.style.transform = "translateY(0)";
-        header.style.paddingTop = `${searchHeight}px`;
+        let positionSeachBox = searchBox.getBoundingClientRect();
+        if(positionSeachBox.top < 0){
+            headerCurrent.style.top = `${-1 * positionSeachBox.top}px`;
+            searchBox.classList.add('open-search');
+            searchBox.style.transform = "translateY(0)";
+            header.style.paddingTop = `${searchHeight}px`;
+        }
     }))
 
-    searchClose.addEventListener('click', function() {
+    searchClose.addEventListener('click', function () {
         searchBox.classList.remove('open-search');
         searchBox.style.transform = "translateY(-100%)";
         header.style.paddingTop = `${0}px`;
@@ -77,12 +79,44 @@ window.addEventListener('load', function () {
 
     });
 
+    // const searchBox = document.querySelector('.search-header');
+    // const search = document.querySelectorAll('.nav-search');
+    // const searchClose = document.querySelector('.search-box-close-icon');
+    // const searchHeight = searchBox.offsetHeight;
+    // const header = document.querySelector('.header');
+    // const padding = document.querySelector('.index-header');
+    // [...search].forEach(item => item.addEventListener('click', function (e) {
+    //     e.stopImmediatePropagation();
+    //     let positionSeachBox = searchBox.getBoundingClientRect();
+    //     headerCurrent.style.top = `${-1 * positionSeachBox.top}px`;
+    //     searchBox.classList.add('open-search');
+    //     searchBox.style.transform = "translateY(0)";
+    //     header.style.paddingTop = `${searchHeight}px`;
+    //     padding.style.paddingTop = '46px';
+    //     let elem = document.querySelector(".open-search");
+    //     let hasClass = elem.classList.contains('open-search');
+    //     if(hasClass) {
+    //         console.log("duoc roi");
+    //         header.style.height = 0;
+    //         padding.style.paddingTop = 0;
+    //     }else {
+    //         console.log("khong duoc roi");
+    //     }
+    // }));
+
+    // searchClose.addEventListener('click', function () {
+    //     searchBox.classList.remove('open-search');
+    //     searchBox.style.transform = "translateY(-100%)";
+    //     header.style.paddingTop = `${0}px`;
+    //     headerCurrent.style.top = `${0}px`;
+    // });
+
 
     //fixed
-    window.addEventListener('scroll',function(e){
+    window.addEventListener('scroll', function (e) {
         e.stopImmediatePropagation();
-        let srcollWindow= window.pageYOffset;
-        if(srcollWindow >= 10){
+        let srcollWindow = window.pageYOffset;
+        if (srcollWindow >= 10) {
             headerActive.style.visibility = "visible";
             headerActive.style.position = "fixed";
 
@@ -91,12 +125,12 @@ window.addEventListener('load', function () {
 
 
             headerCurrent.style.transform = 'translateY(-150%)';
-            
+
             headerCurrent.style.position = "static";
 
 
 
-        }else{
+        } else {
             headerActive.style.opacity = '0';
             headerActive.style.visibility = "hidden";
             headerActive.style.position = "static";
@@ -114,7 +148,7 @@ window.addEventListener('load', function () {
         // const  productTrending =document.querySelector('.product-trending');
         // let positionCurrent = productTrending.getBoundingClientRect();
         const iconTop = document.querySelector('.icon-top');
-        if(srcollWindow >= 400){
+        if (srcollWindow >= 400) {
             iconTop.classList.add('show-icon-top');
         }
         else {
@@ -127,15 +161,15 @@ window.addEventListener('load', function () {
 
     const showList = document.querySelectorAll('.menu-item-list');
 
-    [...showList].forEach(item=>item.addEventListener('click', function (e) {
-        if(this.contains(e.target)){
+    [...showList].forEach(item => item.addEventListener('click', function (e) {
+        if (this.contains(e.target)) {
             let menuList = this.querySelector('.list');
 
             menuList.classList.toggle('openList');
             let name = menuList.className;
             let hoverMenu = this.querySelector('.hover-menu');
             let icon = this.querySelector('.icon-right')
-            if(name.includes('openList')) {
+            if (name.includes('openList')) {
                 hoverMenu.classList.add('bg');
                 icon.style.transform = 'rotate(90deg)'
 
@@ -146,20 +180,20 @@ window.addEventListener('load', function () {
 
             }
 
-            if(menuList.classList.contains('openList')){
+            if (menuList.classList.contains('openList')) {
                 menuList.style.opacity = `1`;
                 this.style.height = `${menuList.offsetHeight + this.offsetHeight}px`;
-                
 
-            }else{
-                setTimeout(()=>{
+
+            } else {
+                setTimeout(() => {
                     this.style.height = `auto`;
                     menuList.style.opacity = `0`;
-                },200)
+                }, 200)
 
             }
         }
-        
+
     }));
 
 

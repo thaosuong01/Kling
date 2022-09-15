@@ -1,0 +1,203 @@
+@media (max-width: 575px) {
+
+}
+
+@media (min-width: 575px) and (max-witdh: 767px) {
+
+}
+
+@media (max-width: 767px) {
+
+    // header
+    .header {
+        .nav-header {
+            height: 60px;
+
+            .nav-menu {
+                .icon-menu {
+                    width: 30px;
+                    height: 100%;
+
+                    .bar-1 {
+                        width: 28px;
+                        height: 3px;
+                        top: 0;
+                    }
+
+                    .bar-2 {
+                        width: 28px;
+                        height: 2px;
+                        top: 8px;
+                    }
+
+                    .bar-3 {
+                        width: 28px;
+                        height: 3px;
+                        top: 15px;
+                    }
+                }
+
+                .menu {
+                    display: none;
+                }
+            }
+
+            .nav-logo {
+                padding-left: 0;
+                padding-right: 3%;
+
+                img {
+                    max-width: 150px;
+                }
+            }
+
+            .nav-item {
+                width: auto;
+                justify-content: flex-end;
+
+
+                .nav-account,
+                .nav-search {
+                    display: none;
+                }
+
+                .header-cart-icon {
+                    padding: 4px;
+                    font-size: 1.6rem;
+                }
+
+                .nav-cart .number {
+                    position: absolute;
+                    left: 62%;
+                    bottom: 38%;
+                }
+
+                .nav-cart {
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // footer
+
+}
+
+@media (min-width: 768px)
+
+/*and (max-witdh: 991px)*/
+    {
+
+    // header
+    header {
+        .nav-header {
+            height: 46px;
+
+            .nav-menu {
+
+                .icon-menu {
+                    width: 18px;
+                    height: 100%;
+
+                    .bar-1 {
+                        width: 20px;
+                        height: 2px;
+                        top: 0;
+                    }
+
+                    .bar-2 {
+                        width: 20px;
+                        height: 1px;
+                        top: 6px;
+                    }
+
+                    .bar-3 {
+                        width: 20px;
+                        height: 2px;
+                        top: 11px;
+                    }
+                }
+
+                .menu {}
+
+            }
+
+            .nav-logo {
+                padding-left: 10%;
+
+                img {
+                    max-width: 120px;
+                }
+            }
+
+            .nav-item {
+                width: auto;
+                display: flex;
+                justify-content: space-between;
+
+                .header-cart-icon {
+                    font-size: 1.4rem;
+                    padding: 0 30px;
+                }
+
+                .nav-account {
+                    padding-right: 30px;
+                }
+
+                .nav-cart .number {
+                    position: absolute;
+                    left: 52%;
+                    bottom: 44%;
+                }
+
+                .nav-account::after,
+                .nav-cart::after {
+                    position: absolute;
+                    height: 32px;
+                    top: -3px;
+                }
+            }
+        }
+
+        .header-menu {
+
+
+            .nav-list {
+
+
+
+
+                .menu-list {
+
+
+                    .icon-close {
+
+
+                        .close-menu {}
+
+                    }
+
+                    .menu-item {
+
+
+                        .hover-menu {}
+
+                        .list {
+
+
+                            .item {}
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    // footer
+
+}
