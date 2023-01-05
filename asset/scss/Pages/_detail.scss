@@ -5,89 +5,74 @@
 
         .product-img {
             .img-center {
-                width: 670px;
 
-                .img-center-list {
-                    .slick-arrow {
-                        position: absolute;
-                        top: 50%;
-                        z-index: 9;
-                        height: 20px;
-
-                        &::before {
-                            content: "";
-                        }
-                    }
-
-                    .slick-prev {
-                        left: 100px;
-                    }
-
-                    .slick-next {
-                        right: 100px;
-                    }
-
-                    .behavior-prev {
-                        font-size: 1.2rem;
-                        width: 30px;
-                        height: 30px;
-                        padding: 10px;
-                        color: #e9e9e9;
-                        left: -30%;
-                        bottom: -10%;
-                        position: absolute;
-                        z-index: 1;
-                        @include transition(all, linear, .3s);
-                    }
-
-                    .behavior-next {
-                        font-size: 1.2rem;
-                        width: 30px;
-                        height: 30px;
-                        padding: 10px;
-                        color: #e9e9e9;
-                        right: -20%;
-                        bottom: -10%;
-                        position: absolute;
-                        z-index: 1;
-                        @include transition(all, linear, .3s);
-                    }
-
-                    .behavior-next:hover,
-                    .behavior-prev:hover {
-                        @include hover(none, #787878, pointer);
-                        font-size: 1.4rem;
-                    }
-
-                    .img-center-item {
-                        img {
-                            width: 60%;
-                            height: 60%;
-                            display: block;
-                            margin-left: auto;
-                            margin-right: auto;
-                        }
-                    }
+                .slick-slide a {
+                    display: block;
+                    position: relative;
+                    height: 300px;
+                    width: 100%;
                 }
-            }
 
-            .img-list {
-                width: 100%;
-                margin: 0;
-                padding: 10px 0;
-
-                .img-item {
-                    // margin: 0 auto;
+                .slick-slide>A>IMG {
+                    position: absolute;
+                    width: 500px;
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+        
+                .slick-dots {
+                    bottom: -20%;
+                    padding-top: 10px;
+                }
+        
+                .slick-dots LI {
+                    width: 100px;
+                    height: 100px;
+                    opacity: .6;
+                }
+        
+                .slick-dots LI.slick-active {
+                    opacity: 1;
+                }
+        
+                .slick-dots LI.slick-active BUTTON,
+                .slick-dots LI:hover BUTTON {
+                    opacity: 1;
+                    transform: scale(1, 1);
+                }
+        
+                .slick-dots LI BUTTON {
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
                     padding: 0;
-                    width: 170px;
-
-                    img {
-                        width: 160px;
-                        height: 160px;
-
-                    }
+                    transition: all .3s linear;
+                    transform: scale(.75, .75);
                 }
+        
+                .slick-dots LI BUTTON IMG {
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+        
+                .slick-dots LI BUTTON:before {
+                    display: block;
+                    position: relative;
+                    content: '';
+                    width: 100%;
+                    padding-top: 100%;
+                    height: auto;
+                }
+
             }
+
+
         }
 
         .product-info {

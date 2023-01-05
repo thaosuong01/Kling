@@ -19,11 +19,76 @@
     <title>Product Details - Kling</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/detail.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <style>
+        /* .img-center .slick-slide>A {
+            display: block;
+            position: relative;
+            height: 300px;
+            width: 100%;
+        } */
+
+        /* .img-center .slick-slide>A>IMG {
+            position: absolute;
+            width: 500px;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .img-center .slick-dots {
+            bottom: -20%;
+            padding-top: 10px;
+        }
+
+        .img-center .slick-dots LI {
+            width: 100px;
+            height: 100px;
+            opacity: .6;
+        }
+
+        .img-center .slick-dots LI.slick-active {
+            opacity: 1;
+        }
+
+        .img-center .slick-dots LI.slick-active BUTTON,
+        .img-center .slick-dots LI:hover BUTTON {
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+
+        .img-center .slick-dots LI BUTTON {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            transition: all .3s linear;
+            transform: scale(.75, .75);
+        }
+
+        .img-center .slick-dots LI BUTTON IMG {
+            display: block;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .img-center .slick-dots LI BUTTON:before {
+            display: block;
+            position: relative;
+            content: '';
+            width: 100%;
+            padding-top: 100%;
+            height: auto;
+        } */
+    </style>
 </head>
 
 <body>
@@ -172,7 +237,7 @@
             <div class="product-details container">
                 <div class="row details-container">
                     <div class="product-img col col-8">
-                        <div class="img-center">
+                        <!-- <div class="img-center">
                             <div class="img-center-list">
                                 <div class="img-center-item">
                                     <img src="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_A_250x250@2x.jpg?v=1650574940"
@@ -191,8 +256,8 @@
                                         alt="">
                                 </div>
                             </div>
-                        </div>
-                        <div class="img-slider">
+                        </div> -->
+                        <!-- <div class="img-slider">
                             <div class="img-list row">
                                 <div class="img-item col col-sm-3">
                                     <img src="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_A_250x250@2x.jpg?v=1650574940"
@@ -211,6 +276,37 @@
                                     <img src="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_D_1024x1024.jpg?v=1652800579"
                                         alt="">
                                 </div>
+                            </div>
+                        </div> -->
+                        <div class="img-center">
+                            <div style="height: 400px;"
+                                data-dot-img="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_A_250x250@2x.jpg?v=1650574940">
+                                <a>
+                                    <img class="img-item-center"
+                                        src="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_A_250x250@2x.jpg?v=1650574940"
+                                        alt="" />
+                                </a>
+                            </div>
+                            <div style="height: 400px;"
+                                data-dot-img="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_B_1024x1024.jpg?v=1652800579">
+                                <a>
+                                    <img src="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_B_1024x1024.jpg?v=1652800579"
+                                        alt="" />
+                                </a>
+                            </div>
+                            <div style="height: 400px;"
+                                data-dot-img="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_C_1024x1024.jpg?v=1652800579">
+                                <a>
+                                    <img src="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_C_1024x1024.jpg?v=1652800579"
+                                        alt="" />
+                                </a>
+                            </div>
+                            <div style="height: 400px;"
+                                data-dot-img="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_D_1024x1024.jpg?v=1652800579">
+                                <a>
+                                    <img src="https://cdn.shopify.com/s/files/1/1933/0009/products/22S2279-HPMSH_valentina-small-hobo_marshmallow_D_1024x1024.jpg?v=1652800579"
+                                        alt="" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -369,7 +465,8 @@
                                     <i class="fa-regular fa-star"></i>
                                 </span>
                                 <div class="review-input">
-                                    <input type="text" id="title" class="title" placeholder="Give your review a title" value>
+                                    <input type="text" id="title" class="title" placeholder="Give your review a title"
+                                        value>
                                     <p class="error error-title"></p>
                                 </div>
                                 <div class="review-comment">
@@ -615,16 +712,63 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="./asset/js/main.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.img-center-list').slick({
-                speed: 300,
+            // $('.img-center-list').slick({
+            //     speed: 300,
+            //     slidesToShow: 1,
+            //     arrows: true,
+            //     autoplay: true,
+            //     autoplaySpeed: 3000,
+            //     prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-angles-left behavior-prev'></i></button>",
+            //     nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-angles-right behavior-next'></i></button>",
+            //     dots: true,
+            // });
+
+            const options = {
                 slidesToShow: 1,
-                arrows: true,
-                prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-angles-left behavior-prev'></i></button>",
-                nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-angles-right behavior-next'></i></button>",
-            });
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+
+            };
+
+            // my slick slider as const object
+            const mySlider = $('.img-center').on('init', function (slick) {
+
+                // set this slider as const for use in set time out
+                const slider = this;
+
+                // slight delay so init completes render
+                setTimeout(function () {
+
+                    // dot buttons
+                    let dots = $('.slick-dots > LI > BUTTON', slider);
+
+                    // each dot button function
+                    $.each(dots, function (i, e) {
+
+                        // slide id
+                        let slide_id = $(this).attr('aria-controls');
+
+                        // custom dot image
+                        let dot_img = $('#' + slide_id).data('dot-img');
+
+                        $(this).html('<img src="' + dot_img + '" alt="" />');
+
+                    });
+
+                }, 100);
+
+
+            }).slick(options);
         });
     </script>
 </body>

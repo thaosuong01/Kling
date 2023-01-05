@@ -215,7 +215,86 @@ header {
             position: relative;
 
 
-            .nav-account a,
+            .nav-account {
+                .header-account-icon {
+                    position: relative;
+                }
+
+                .user-list {
+                    position: absolute;
+                    background-color: #fff;
+                    box-shadow: 0 2px 5px #e9e9e9;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    width: 120px;
+                    top: 100%;
+                    right: 70%;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include transition(all, linear, .4s);
+
+                    .user-item {
+                        text-align: center;
+                        
+                        a {
+                            position: relative;
+                            padding: 4px 10px;
+                            @include font($font, 1.1rem, none);
+                            color: #000;
+                            text-decoration: none;
+                            @include transition(all, linear, .4s);
+                            display: block;
+                            &:hover {
+                                @include hover($hoverColor, #fff, pointer);
+                            }
+                        }
+
+                    }
+                    .user-item.user-login {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            border-bottom: 1px solid rgb(234, 231, 231);
+                            width: 100%;
+                            left: 0;
+                            top: 25%;
+                        }
+                    }
+                    .user-item.user-register {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            border-bottom: 1px solid rgb(234, 231, 231);
+                            width: 100%;
+                            left: 0;
+                            top: 49%;
+                        }
+                    }
+                    .user-item.user-logout {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            border-bottom: 1px solid rgb(234, 231, 231);
+                            width: 100%;
+                            left: 0;
+                            top: 75%;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .header-account-icon {
+                        @include hover(none, $hoverColor, pointer);
+                    }
+
+                    .user-list {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+
             .nav-cart a {
                 color: #000;
             }
@@ -233,7 +312,6 @@ header {
                 @include transition(all, linear, .3s);
             }
 
-            .header-account-icon:hover,
             .header-search-icon:hover {
                 @include hover(none, $hoverColor, pointer);
             }
@@ -314,6 +392,7 @@ header {
                 z-index: 50;
                 position: relative;
                 z-index: 100;
+
                 .icon-close {
                     text-align: right;
                     padding: 8px;
@@ -337,13 +416,15 @@ header {
                     z-index: 50;
                     background-color: #fff;
                     @include transition(all, linear, .3s);
-                    height:auto;
+                    height: auto;
+
                     .hover-menu {
                         padding: 12px;
                         @include transition(all, linear, .3s);
                         position: relative;
                         z-index: 4;
                         background-color: #fff;
+
                         a {
                             color: #000;
                             text-decoration: none;
@@ -371,7 +452,7 @@ header {
                         &.bg {
                             background-color: #e9e9e9;
                         }
-                       
+
 
                         .icon-right {
                             position: absolute;
@@ -389,13 +470,13 @@ header {
                         background-color: #fff;
                         // transform: translateY(-100%);
                         @include transition(all, linear, .3s);
-                      
+
 
                         &.openList {
                             visibility: visible;
                             opacity: 1;
                             // transform: translateY(0);
-                            
+
                         }
 
                         .item {
@@ -403,6 +484,7 @@ header {
                             list-style: none;
                             padding-bottom: 12px;
                             padding-left: 12px;
+
                             a {
                                 text-decoration: none;
                                 color: #000;
@@ -412,7 +494,7 @@ header {
                                 padding-top: 8px;
                             }
 
-                            &:hover a{
+                            &:hover a {
                                 @include hover(none, $hoverColor, pointer);
                             }
                         }
